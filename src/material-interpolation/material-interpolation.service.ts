@@ -1,7 +1,9 @@
+import { Injectable } from '@nestjs/common';
 import { IMaterial, IProperty } from '../db-models/material.model';
 import { IncomingDataDto } from '../shell-tube-exch/dto/incoming-data.dto';
 
-export class MaterialInterpolation {
+@Injectable()
+export class MaterialInterpolationService {
   private endPoints(temperature: number): { biggerEndPoint: number; lessEndPoint: number } {
     const temp = Math.round(temperature);
 

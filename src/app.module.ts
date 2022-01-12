@@ -6,6 +6,7 @@ import { ShellTubeExchModule } from './shell-tube-exch/shell-tube-exch.module';
 import { NewMaterialModule } from './new-material/new-material.module';
 import { APP_PIPE } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
+import { MaterialInterpolationModule } from './material-interpolation/material-interpolation.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       inject: [ConfigService],
     }),
     NewMaterialModule,
+    MaterialInterpolationModule,
   ],
   controllers: [AppController],
   providers: [

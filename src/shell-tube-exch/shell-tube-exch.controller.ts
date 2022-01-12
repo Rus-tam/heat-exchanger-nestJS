@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ShellTubeExchService } from './shell-tube-exch.service';
-
-import { MaterialInterpolationService } from './materialInterpolationService';
+import { MaterialInterpolationService } from '../material-interpolation/material-interpolation.service'
 import { IncomingDataDto } from './dto/incoming-data.dto';
 
 @Controller('heat-exch/shell-tube-exch')
